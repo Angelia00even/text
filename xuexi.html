@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="按钮1">
+        <input type="button" value="按钮2">
+        <input type="button" value="按钮3">
+        <input type="button" value="按钮4">
+    </div>
+    <script>
+        var oBtn = document.getElementsByTagName('input');
+        for (var i = 0; i < oBtn.length; i++){
+//            oBtn[i].onclick=(function (index) {
+//                return function () {
+//                    alert(index);
+//                }
+//            })(i);
+            oBtn[i].onclick = (function (index) {
+                return function () {
+                    alert(index+1);
+                }
+            })(i);
+        }
+    </script>
+</body>
+</html>
